@@ -1,0 +1,136 @@
+:root {
+    --clr-primary-cyan: hsl(180, 62%, 55%);
+    --clr-primary-red: hsl(0, 78%, 62%);
+    --clr-primary-orange: hsl(34, 97%, 64%);
+    --clr-primary-blue: hsl(212, 86%, 64%);
+
+    --clr-neutral-veryDarkBlue: hsl(234, 12%, 34%);
+    --clr-neutral-grayishBlue: hsl(229, 6%, 66%);
+    --clr-neutral-veryLightBlue: hsl(0, 0%, 98%);
+
+    --fs-base: .9375rem;
+    --ff-base: "Poppins", sans-serif;
+
+    --fw-light: 200;
+    --fw-base: 400;
+    --fw-bold: 600;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--ff-base);
+    font-size: 1rem;
+    font-weight: var(--fw-base);
+    color: var(--clr-neutral-grayishBlue);
+    padding-block-end: 5rem;
+}
+
+/* Header component styling */
+header{
+    text-align: center;
+    margin-block: 4rem;
+    padding-inline: 1.5rem;
+}
+
+.wrapper--narrow{
+    max-width: 500px;
+    margin-inline: auto;
+}
+
+h1{
+    font-weight: var(--fw-light);
+    margin-block-end: 1rem;
+}
+
+h1 span{
+    font-weight: var(--fw-bold);
+}
+
+h1,
+h2{
+    color: var(--clr-neutral-veryDarkBlue);
+}
+
+h2{
+    font-size: 1.4rem;
+    font-weight: var(--fw-bold);
+    margin-block-end: .875rem;
+}
+
+p{
+    font-size: .875rem;
+    line-height: 1.7;
+}
+
+/* main grid layout styling */
+.wrapper{
+    --gap: 1.8rem;
+    padding-inline: 1.5rem;
+    display: flex;
+    gap: var(--gap);
+    max-width: 1220px;
+    margin-inline: auto;
+}
+
+.col{
+    flex: 1;
+    display: grid;
+    place-content: center;
+    gap: var(--gap);
+}
+
+.card{
+    border-top: 5px solid yellow;
+    box-shadow: 0px 1rem 1.5rem -.5rem rgb(0 50 100 / .25);
+    border-radius: .4rem;
+    padding: 2rem;
+}
+
+.card img{
+    display: block;
+    margin-inline-start: auto;
+    margin-block-start: 1.5rem;
+}
+
+.cyan-border{
+    border-color: var(--clr-primary-cyan);
+}
+
+.red-border{
+    border-color: var(--clr-primary-red);
+}
+
+.orange-border{
+    border-color: var(--clr-primary-orange);
+}
+
+.blue-border{
+    border-color: var(--clr-primary-blue);
+}
+
+/* media query */
+@media(max-width: 800px){
+    header h1{
+        font-size: 1.6rem;
+    }
+
+    .wrapper{
+        display: grid;
+    }
+
+    .col{
+        place-content: unset;
+    }
+}
+
+.attribution{
+    font-size: 0.6rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
